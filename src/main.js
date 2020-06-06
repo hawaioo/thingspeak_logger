@@ -6,7 +6,7 @@ import * as VueGoogleMaps from "vue2-google-maps";
 
 Vue.config.productionTip = false;
 
-const GOOGLE_API_KEY = ""; // Add GoogleAPIKey to use Google maps
+const GOOGLE_API_KEY = process.env.G_API_KEY || ""; // Add GoogleAPIKey to use Google maps
 
 Vue.use(VueAxios, axios);
 Vue.use(VueGoogleMaps, {
