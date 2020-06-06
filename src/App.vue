@@ -23,7 +23,7 @@
         <th>Datum</th>
         <th>Feed1</th>
         <th>Feed2</th>
-        <th>Googe Maps</th>
+        <th v-if="useGoogleMaps">Google Maps</th>
       </tr>
       <tr v-for="(feed, index) in this.data.feeds" :key="index">
         <td>
@@ -35,7 +35,7 @@
         <td>
           {{ feed.field2 }}
         </td>
-        <td>
+        <td v-if="useGoogleMaps">
           <p>Längengrad; Breitengrad</p>
           <button @click="setCoordsAndShowMap(feed.field4, feed.field5)">
             {{ feed.field4 }}; {{ feed.field5 }}
@@ -60,6 +60,7 @@ export default {
       apiKey: "",
       channelId: "",
       resultCount: "10",
+      useGoogleMaps: false,
       data: [],
       showMap: false,
       latitude: 0,
