@@ -3,7 +3,9 @@ A simple application to allow users to display their "thingspeak" channel feeds
 
 ## Application setup:
 In `/src/App.vue`
+<br>
 Paste your API Key for thinkgsspeak.com into apiKey
+<br>
 Paste your channelID into channelID
 
 optional: resultCount can be configured to limit each API-call
